@@ -95,6 +95,20 @@
                float: left;
                width: 200px
              }
+             .buttonJoin {
+               background-color: blue;
+               border: none;
+               color: white;
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: block;
+               font-size: 16px;
+               margin: 4px 2px;
+               cursor: pointer;
+               float: left;
+               width: 200px
+             }
             .textMaximize {
                background-color: white;
                //border: none;
@@ -189,9 +203,9 @@
                     var tr = document.createElement('tr');
                     tr.id = _screen.userid; 
                     tr.innerHTML = '<td>' + _screen.userid + ' shared his screen.</td>' +
-                            '<td><button class="join">Preview His Screen</button></td>';
+                            '<td><button class="buttonJoin">Preview His Screen</button></td>';
                     roomsList.insertBefore(tr, roomsList.firstChild);
-                    var button = tr.querySelector('.join');
+                    var button = tr.querySelector('.buttonJoin');
                     button.setAttribute('data-userid', _screen.userid);
                     button.setAttribute('data-roomid', _screen.roomid);
                     button.onclick = function() {

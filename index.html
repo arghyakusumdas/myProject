@@ -16,7 +16,7 @@
         <meta name="author" content="Muaz Khan">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdn.webrtc-experiment.com/style.css">
 
         <style>
             video {
@@ -28,7 +28,7 @@
                 vertical-align: top;
                 width: 100%;
             }
-            /*input {
+            input {
                 border: 1px solid #d9d9d9;
                 border-radius: 1px;
                 font-size: 2em;
@@ -59,7 +59,28 @@
                 border-bottom: 1px solid rgb(189, 189, 189);
                 border-left: 1px solid rgb(189, 189, 189);
                 padding: .5em;
-            }*/
+            }
+            div.container {
+            width: 100%;
+            border: 1px solid gray;
+            }
+
+            header{
+            padding: 1em;
+            color: white;
+            background-color: blue;
+            clear: left;
+            text-align: left;
+            }
+
+            footer {
+            padding: 0.5em;
+            color: white;
+            background-color: blue;
+            clear: left;
+            text-align: center;
+            }
+
             .buttonMaximize {
                background-color: blue;
                border: none;
@@ -109,12 +130,14 @@
             <img src="logo.jpg">
             <h1>Logo and description</h1>
         </header>
-        <table align="center">
+        <table>
             <tr><td><input type="text" id="user-name" class="textMaximize" placeholder="Your Name"></td> <td><button class="buttonMaximize" id="share-screen">Share Screen</button></td></tr>
         </table>
         <table style="width: 100%;" id="rooms-list"></table>
         <div id="videos-container" style="overflow:auto; height:400px;width:930px; background:grey"></div>
         <footer>Copyright &copy; CompanyName</footer>
+
+<!--
         <article>
             <header style="text-align: center;">
                 <h1>
@@ -135,13 +158,11 @@
                     </table>
                 </section>
 
-                <!-- list of all available broadcasting rooms -->
                 <table style="width: 100%;" id="rooms-list"></table>
 
-                <!-- local/remote videos container -->
                 <div id="videos-container" style="overflow:auto; height:400px;width:930px; background=grey"></div>
             </section>
-
+-->
 
 <script>
                 function intallFirefoxScreenCapturingExtension() {
@@ -168,7 +189,7 @@
                     var tr = document.createElement('tr');
                     tr.id = _screen.userid; 
                     tr.innerHTML = '<td>' + _screen.userid + ' shared his screen.</td>' +
-                            '<td><button class="buttonMaximize">Preview His Screen</button></td>';
+                            '<td><button class="join">Preview His Screen</button></td>';
                     roomsList.insertBefore(tr, roomsList.firstChild);
                     var button = tr.querySelector('.join');
                     button.setAttribute('data-userid', _screen.userid);

@@ -16,7 +16,7 @@
         <meta name="author" content="Muaz Khan">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <link rel="stylesheet" href="https://cdn.webrtc-experiment.com/style.css">
+        <link rel="stylesheet" href="main.css">
 
         <style>
             video {
@@ -28,7 +28,7 @@
                 vertical-align: top;
                 width: 100%;
             }
-            input {
+            /*input {
                 border: 1px solid #d9d9d9;
                 border-radius: 1px;
                 font-size: 2em;
@@ -59,7 +59,36 @@
                 border-bottom: 1px solid rgb(189, 189, 189);
                 border-left: 1px solid rgb(189, 189, 189);
                 padding: .5em;
-            }
+            }*/
+            .buttonMaximize {
+               background-color: blue;
+               border: none;
+               color: white;
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: block;
+               font-size: 16px;
+               margin: 4px 2px;
+               cursor: pointer;
+               float: left;
+               width: 200px
+             }
+            .textMaximize {
+               background-color: white;
+               //border: none;
+               color: black;
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: block;
+               font-size: 16px;
+               margin: 4px 2px;
+               cursor: pointer;
+               float: left;
+               width: 200px
+             }
+
         </style>
         <script>
             document.createElement('article');
@@ -75,12 +104,21 @@
     </head>
 
     <body>
-        <article>
+        <div id="divMain" class="container">
+        <header>
+            <img src="logo.jpg">
+            <h1>Logo and description</h1>
+        </header>
+        <table align="center">
+            <tr><td><input type="text" id="user-name" class="textMaximize" placeholder="Your Name"></td> <td><button class="buttonMaximize" id="share-screen">Share Screen</button></td></tr>
+        </table>
+        <div id="videos-container" align="center" style="overflow:auto; height:400px;width:930px; background:grey"></div>
+        <footer>Copyright &copy; CompanyName</footer>
+        <!--<article>
             <header style="text-align: center;">
                 <h1>
-                    WebRTC Screen Sharing
+                     Screen Sharing
                 </h1>
-
             
 
             <section class="experiment">
@@ -88,16 +126,21 @@
                     <span>
                         Private ?? <a href="/screen-sharing/" target="_blank" title="Open this link for private screen sharing!"><code><strong id="unique-token">#123456789</strong></code></a>
                     </span>
-                    <input type="text" id="user-name" placeholder="Your Name">
-                    <button id="share-screen" class="setup">Share Your Screen</button>
+                    <table>
+                    <tr>
+                    <td><input type="text" id="user-name" placeholder="Your Name"></td>
+                    <td><button class="buttonMaximize" id="share-screen">Share Your Screen</button></td>
+                    </tr>
+                    </table>
                 </section>
 
                 <!-- list of all available broadcasting rooms -->
                 <table style="width: 100%;" id="rooms-list"></table>
 
                 <!-- local/remote videos container -->
-                <div id="videos-container"></div>
+                <div id="videos-container" style="overflow:auto; height:400px;width:930px; background=grey"></div>
             </section>
+-->
 
 <script>
                 function intallFirefoxScreenCapturingExtension() {
@@ -124,7 +167,7 @@
                     var tr = document.createElement('tr');
                     tr.id = _screen.userid; 
                     tr.innerHTML = '<td>' + _screen.userid + ' shared his screen.</td>' +
-                            '<td><button class="join">Preview His Screen</button></td>';
+                            '<td><button class="buttonMaximize">Preview His Screen</button></td>';
                     roomsList.insertBefore(tr, roomsList.firstChild);
                     var button = tr.querySelector('.join');
                     button.setAttribute('data-userid', _screen.userid);

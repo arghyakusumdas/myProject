@@ -1,0 +1,236 @@
+/* CSS declarations go here */
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header{
+    padding: 1em;
+    color: white;
+    background-color: blue;
+    clear: left;
+    text-align: left;
+}
+
+footer {
+    padding: 0.5em;
+    color: white;
+    background-color: blue;
+    clear: left;
+    text-align: center;
+}
+
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 285px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+    height: 390px
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: blue;
+  width: 300px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 250px
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+    width: 300px
+}
+
+/*****************************Start: Bad design*************************************************/
+/**** 'tab' style should work. Possibly this 'tabArticle' style is not required at all *********/
+/**** 'tabArticle' just has a different width than 'tab'. Otherwise same ***********************/
+/* Style the tab */
+div.tabArticle {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 945px
+}
+
+/* Style the buttons inside the tab */
+div.tabArticle button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tabArticle button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tabArticle button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabArtcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+    width: 300px
+}
+/*****************************End: Bad design***********************************************************/
+
+.buttonMaximize {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: left;
+    width: 200px
+}
+
+.buttonEnlarge {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: left;
+    width: 24px
+}
+
+/*Thumbnail view left pane*/
+.rectangleDiv{
+    width:234px;
+    height:200px;
+    background:grey;
+}
+/*Thumbnail view dashboard*/
+.rectangleDivDash{
+    width:200px;
+    height:125px;
+    background:grey;
+}
+
+/*Chat button*/
+.buttonChat {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 120px
+    height: 100px
+}
+

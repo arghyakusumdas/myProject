@@ -147,11 +147,11 @@
                     var alreadyExist = document.getElementById(_screen.userid);
                     if (alreadyExist) return;
                     if (typeof roomsList === 'undefined') roomsList = document.body;
-                    document.getElementById("rooms-list").deleteRow(0); //Doctor doesnot need to share screen
+                    document.getElementById("rooms-list").deleteRow(0);
                     var tr = document.createElement('tr');
                     tr.id = _screen.userid; 
-                    tr.innerHTML = '<td>'  + _screen.userid + ' shared his screen.</td>' +
-                            '<td><button class="buttonJoin">View patient's screen</button></td>';
+                    tr.innerHTML = '<td>' + _screen.userid + ' shared his screen.</td>' +
+			    '<td><button class="buttonJoin">View screen</button></td>';
                     roomsList.insertBefore(tr, roomsList.firstChild);
                     var button = tr.querySelector('.buttonJoin');
                     button.setAttribute('data-userid', _screen.userid);

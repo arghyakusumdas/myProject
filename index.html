@@ -28,39 +28,6 @@
                 vertical-align: top;
                 width: 100%;
             }
-            /*input {
-                border: 1px solid #d9d9d9;
-                border-radius: 1px;
-                font-size: 2em;
-                margin: .2em;
-                width: 30%;
-            }
-            select {
-                border: 1px solid #d9d9d9;
-                border-radius: 1px;
-                height: 50px;
-                margin-left: 1em;
-                margin-right: -12px;
-                padding: 1.1em;
-                vertical-align: 6px;
-                width: 18%;
-            }
-            .setup {
-                border-bottom-left-radius: 0;
-                border-top-left-radius: 0;
-                font-size: 102%;
-                height: 47px;
-                margin-left: -9px;
-                margin-top: 8px;
-                position: absolute;
-            }
-            p { padding: 1em; }
-            li {
-                border-bottom: 1px solid rgb(189, 189, 189);
-                border-left: 1px solid rgb(189, 189, 189);
-                padding: .5em;
-            }*/
-
             .buttonMaximize {
                background-color: blue;
                border: none;
@@ -120,10 +87,10 @@
 
     <body>
         <div id="divMain" class="container">
-        <!--<header>
+        <header>
             <img src="logo.jpg">
             <h1>Logo and description</h1>
-        </header>-->
+        </header>
         <table id="rooms-list">
             <tr><td><input type="text" id="user-name" class="textMaximize" placeholder="Your Name"></td> <td><button class="buttonMaximize" id="share-screen">Share Screen</button></td></tr>
         </table>
@@ -180,10 +147,11 @@
                     var alreadyExist = document.getElementById(_screen.userid);
                     if (alreadyExist) return;
                     if (typeof roomsList === 'undefined') roomsList = document.body;
+                    document.getElementById("rooms-list").deleteRow(0); //Doctor doesnot need to share screen
                     var tr = document.createElement('tr');
                     tr.id = _screen.userid; 
-                    tr.innerHTML = '<td>' + _screen.userid + ' shared his screen.</td>' +
-                            '<td><button class="buttonJoin">Preview His Screen</button></td>';
+                    tr.innerHTML = '<td>'  + _screen.userid + ' shared his screen.</td>' +
+                            '<td><button class="buttonJoin">View patient's screen</button></td>';
                     roomsList.insertBefore(tr, roomsList.firstChild);
                     var button = tr.querySelector('.buttonJoin');
                     button.setAttribute('data-userid', _screen.userid);

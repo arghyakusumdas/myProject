@@ -19,44 +19,6 @@
         <link rel="stylesheet" href="main.css">
 
         <style>
-    div.container {
-      width: 100%;
-      border: 1px solid gray;
-    }
-
-    header{
-      padding: 1em;
-      color: white;
-      background-color: #f1f1f1;
-      background-image:url('./header.png');
-      background-repeat: no-repeat;
-      clear: left;
-      text-align: left;
-      height: 50px;
-    }
-    .ButonTemplate {
-      display: block;
-      background-color: #4A9CA8;
-      color: white;
-      padding: 16px 10px;
-      width: 100%;
-      border: 10px solid #ffffff;
-      outline: none;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 17px;
-    }
-    .ButonTemplate.active {
-      background-color: #317194;
-    }
-    .ButonTemplate:hover {
-      background-color: #317194;
-    }
-    .ButtonTemplate.disabled {
-      background-color: gray;
-    }
-
             video {
                 -moz-transition: all 1s ease;
                 -ms-transition: all 1s ease;
@@ -157,13 +119,11 @@
     <body>
         <div id="divMain" class="container">
         <header>
-        <table>
-          <tr height:"100"> </tr>
-          <tr height:"100"> </tr>
-        </table>
+            <img src="logo.jpg">
+            <h1>Logo and description</h1>
         </header>
         <table id="rooms-list">
-            <tr><td><input type="text" id="user-name" class="textMaximize" placeholder="Your Name"></td> <td><button class="ButonTemplate" id="share-screen">Share Screen</button></td></tr>
+            <tr><td><input type="text" id="user-name" class="textMaximize" placeholder="Your Name"></td> <td><button class="buttonMaximize" id="share-screen">Share Screen</button></td></tr>
         </table>
         <!--<table id="rooms-list"></table>-->
         <div id="videos-container" style="overflow:auto; height:400px;width:100%; background:grey"></div>
@@ -184,7 +144,7 @@
                     <table>
                     <tr>
                     <td><input type="text" id="user-name" placeholder="Your Name"></td>
-                    <td><button class="ButonTemplate" id="share-screen">Share Your Screen</button></td>
+                    <td><button class="buttonMaximize" id="share-screen">Share Your Screen</button></td>
                     </tr>
                     </table>
                 </section>

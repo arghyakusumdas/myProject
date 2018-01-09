@@ -64,7 +64,7 @@
                 -webkit-transition: all 1s ease;
                 transition: all 1s ease;
                 vertical-align: top;
-                width: 90%;
+                width: 100%;
             }
             /*input {
                 border: 1px solid #d9d9d9;
@@ -113,19 +113,27 @@
                width: 200px
              }
              .buttonJoin {
-               background-color: blue;
-               border: none;
-               color: white;
-               padding: 15px 32px;
-               text-align: center;
-               text-decoration: none;
-               display: block;
-               font-size: 16px;
-               margin: 4px 2px;
-               cursor: pointer;
-               float: left;
-               width: 200px
+                 display: block;
+                 background-color: #4A9CA8;
+                 color: white;
+                 padding: 16px 10px;
+                 width: 100%;
+                 border: 10px solid #ffffff;
+                 outline: none;
+                 text-align: center;
+                 cursor: pointer;
+                 transition: 0.3s;
+                 font-size: 17px;
              }
+            .ButonTemplate.active {
+                background-color: #317194;
+            }
+            .ButonTemplate:hover {
+                background-color: #317194;
+            }
+            .ButtonTemplate.disabled {
+                background-color: gray;
+            }
             .textMaximize {
                background-color: white;
                //border: none;
@@ -166,7 +174,7 @@
             <tr><td><input type="text" id="user-name" class="textMaximize" placeholder="Your Name"></td> <td><button class="ButonTemplate" id="share-screen">Share Screen</button></td></tr>
         </table>
         <!--<table id="rooms-list"></table>-->
-        <div id="videos-container" style="overflow:auto; height:400px;width:60%; background-color:#f1f1f1; border-style:solid; border-color:#4A9CA8; border-width:5px"></div>
+        <div id="videos-container" style="overflow:auto; height:400px;width:100%; background-color:#f1f1f1; border-style:solid; border-color:#4A9CA8; border-width:5px"></div>
         <!--<footer>Copyright &copy; CompanyName</footer>-->
 
 <!--
@@ -220,6 +228,7 @@
                     tr.id = _screen.userid; 
                     tr.innerHTML = '<td>' + _screen.userid + ' shared his screen.</td>' +
                             '<td><button class="buttonJoin">View screen</button></td>';
+                            <a href="https://arghyakusumdas.github.io/myProject/#1234567890111213">See in a new window</a>
                     roomsList.insertBefore(tr, roomsList.firstChild);
                     var button = tr.querySelector('.buttonJoin');
                     button.setAttribute('data-userid', _screen.userid);
